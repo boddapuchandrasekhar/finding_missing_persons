@@ -1,0 +1,160 @@
+/* Make all text white globally */
+* {
+  color: white !important;
+  box-sizing: border-box;
+}
+
+/* Center form container */
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.form-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Submit button – white background, black text */
+.submit-btn {
+  background-color: white;
+  color: black !important;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #26a739;
+  color: white !important;
+}
+
+/* Other buttons */
+.white-btn {
+  background-color: white;
+  color: black !important;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.white-btn:hover {
+  background-color: #be1414;
+  color: white !important;
+}
+/* Layout.css */
+
+/* Remove vertical centering */
+.match-container {
+  display: flex;
+  justify-content: center;  /* horizontally center only */
+  padding-top: 40px; /* push down from the top */
+  min-height: 100vh;
+}
+
+/* Card styling */
+.match-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  color: white;
+}
+
+/* Button styling */
+.white-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.white-btn:hover {
+  background-color: #b50f0f;
+}
+
+/* Result card */
+.match-result-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  color: white;
+}
+
+.alert-warning {
+  color: yellow;
+  margin-top: 15px;
+}
+
+
+/* App wrapper background settings */
+.app-wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Navbar */
+.nav-bar {
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #dbd9d9;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white !important;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(203, 203, 203) !important;
+}
+
+.nav-link.active {
+  color: rgb(194, 194, 194) !important;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+.outlet-container {
+  padding: 20px;
+  min-height: calc(100vh - 60px);
+}
+
+/* Input and textarea styles */
+input, textarea {
+  color: black !important;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+  color: gray;
+}

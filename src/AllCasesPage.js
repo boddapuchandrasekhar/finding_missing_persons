@@ -7,7 +7,7 @@ const AllCasesPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('${API_BASE_URL}/cases')
+    axios.get(`${API_BASE_URL}/api/cases`)
       .then(res => {
         setCases(res.data);
         setLoading(false);
@@ -23,6 +23,8 @@ const AllCasesPage = () => {
       <h2>All Missing Person Cases</h2>
       {loading ? (
         <p>Loading...</p>
+      ) : cases.length === 0 ? (
+        <p>No cases found.</p>
       ) : (
         <div className="row">
           {cases.map(person => (
@@ -38,10 +40,18 @@ const AllCasesPage = () => {
                 )}
                 <div className="card-body">
                   <h5 className="card-title">{person.name}</h5>
-                  <p className="card-text"><strong>Father's Name:</strong> {person.fatherName}</p>
-                  <p className="card-text"><strong>Phone:</strong> {person.phone}</p>
-                  <p className="card-text"><strong>Birth Marks:</strong> {person.birthMarks}</p>
-                  <p className="card-text"><strong>Info:</strong> {person.personalInfo}</p>
+                  <p className="card-text">
+                    <strong>Father's Name:</strong> {person.fatherName}
+                  </p>
+                  <p className="card-text">
+                    <strong>Phone:</strong> {person.phone}
+                  </p>
+                  <p className="card-text">
+                    <strong>Birth Marks:</strong> {person.birthMarks}
+                  </p>
+                  <p className="card-text">
+                    <strong>Info:</strong> {person.personalInfo}
+                  </p>
                 </div>
               </div>
             </div>
